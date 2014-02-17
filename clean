@@ -3,7 +3,7 @@ needle="GIT_CLEAN"
 IFS=''
 while read line; do
   # Did we find the needle in the line?
-  if [ -z "${line##*$needle*}" ]; then
+  if [[ $line == *$needle* ]]; then
     # create array for items after needle
     eval array=("${line#*$needle}") &>/dev/null
     # Do we have 2 item in the array?
