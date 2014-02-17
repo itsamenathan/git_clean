@@ -1,0 +1,3 @@
+[filter "git_clean"]
+	clean = /path/to/clean
+        required

@@ -1,0 +1,19 @@
+#!/bin/bash
+needle="GIT_CLEAN"
+IFS=''
+while read line; do
+  # Did we find the needle in the line?
+  if [ -z "${line##*$needle*}" ]; then
+    # create array for items after needle
+    eval array=("${line#*$needle}") &>/dev/null
+    # Do we have 2 item in the array?
+    if [ ${#array[@]} -ne 2 ]; then
+      exit 1
+    fi
+    read line
+    match=${array[0]}
+    replace=${array[1]}
+    line=${line//$match/$replace}
+  fi
+  echo "$line"
+done
