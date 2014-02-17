@@ -31,12 +31,15 @@ clean script in your git config section.
 ## Example
 
 Your code looks something like this.
-`#GIT_CLEAN 555-555-5555 xxx-xxx-xxx
+```
+#GIT_CLEAN 555-555-5555 xxx-xxx-xxx
 phone=555-555-5555
 #GIT_CLEAN "secret string" xxxx
-secet="secret string"`
-
+secet="secret string"
+```
+```
 When added to your staging area, you will see.
-`phone=xxx-xxx-xxxx
-secet="xxxx"`
+phone=xxx-xxx-xxxx
+secet="xxxx"
+```
 
