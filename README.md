@@ -37,8 +37,9 @@ phone=555-555-5555
 #GIT_CLEAN "secret string" xxxx
 secet="secret string"
 ```
-```
+
 When added to your staging area, you will see.
+```
 phone=xxx-xxx-xxxx
 secet="xxxx"
 ```
